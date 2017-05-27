@@ -1,6 +1,6 @@
 /**
  * 基础配置
- * 
+ *
  * by tommyshao
  */
 'use strict';
@@ -65,10 +65,17 @@ module.exports = {
                 loader: 'babel',
                 query: {
                     presets: ['react', 'es2015', 'stage-2'],
+                    plugins:[
+                      ['import',{
+                        libraryName:'antd',
+                        style:'css',
+                      }]
+                    ],
                     cacheDirectory: true
                 }
             }
         ],
+
         postLoaders: [
           {
             test: /\.js$/,
